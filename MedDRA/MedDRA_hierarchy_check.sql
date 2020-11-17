@@ -1,5 +1,4 @@
 --Check the parents of MedDRA code (including itselt)
-
 SELECT cc.concept_name, cc.concept_class_id, ca.max_levels_of_separation, cc.concept_code
 FROM devv5.concept c
 
@@ -10,7 +9,6 @@ JOIN devv5.concept cc
 
 WHERE c.concept_code = '10058482' AND c.vocabulary_id = 'MedDRA' AND cc.vocabulary_id = 'MedDRA'
 ORDER BY ca.max_levels_of_separation DESC;
-
 
 
 
